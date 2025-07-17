@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu País!</title>
+</head>
+<body>
+    <h1>De que país você é?</h1>
+    Digite o nome do seu país aqui: <input type="text" name="namepaís" id="np">
+    <input type="button" value="Enviar" onclick="Verificar()">
+    <div id = 'res'>
+
+    </div>
+
+    <script>
+
+        function Verificar(){
+            const pais = window.document.getElementById('np').value;
+
+            const res = window.document.getElementById('res');
+            res.innerHTML = `<p> Você vive no ${pais} </p>`
+
+            if (pais.toLowerCase() == 'brasil') {
+                res.innerHTML += `<p>Você é <strong>BRASILEIRO</strong></p>`
+            } else{
+                res.innerHTML += '<p>Voce é <strong>ESTRANGEIRO</strong></p>'
+            }
+        }
+
+    </script>
+</body>
+</html>
